@@ -62,30 +62,35 @@ gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 plt.title('Original Image')
 plt.axis('off')
-```
-<img width="516" height="351" alt="image" src="https://github.com/user-attachments/assets/ce044619-0f80-4317-9431-efa3cb6507da" />
-```
+
+
+
 sobel_x = cv2.Sobel(gray_image, cv2.CV_64F, 1, 0, ksize=5)  
 sobel_y = cv2.Sobel(gray_image, cv2.CV_64F, 0, 1, ksize=5)  
 sobel_combined = cv2.magnitude(sobel_x, sobel_y)  
 plt.imshow(sobel_combined, cmap='gray')
 plt.title('Sobel Edge Detection')
 plt.axis('off')
-```
-<img width="516" height="351" alt="image" src="https://github.com/user-attachments/assets/1d73d36e-766a-43a4-be88-718f02835647" />
-```
+
+
 laplacian = cv2.Laplacian(gray_image, cv2.CV_64F)
 plt.imshow(laplacian, cmap='gray')
 plt.title('Laplacian Edge Detection')
 plt.axis('off')
-```
-<img width="516" height="351" alt="image" src="https://github.com/user-attachments/assets/17ef6198-b0c2-426e-8655-a5f0f0ca2790" />
-```
+
 canny_edges = cv2.Canny(gray_image, 50, 150)
 plt.imshow(canny_edges, cmap='gray')
 plt.title('Canny Edge Detection')
 plt.axis('off')
 ```
+
+## Output:
+
+<img width="516" height="351" alt="image" src="https://github.com/user-attachments/assets/ce044619-0f80-4317-9431-efa3cb6507da" />
+
+<img width="516" height="351" alt="image" src="https://github.com/user-attachments/assets/1d73d36e-766a-43a4-be88-718f02835647" />
+
+<img width="516" height="351" alt="image" src="https://github.com/user-attachments/assets/17ef6198-b0c2-426e-8655-a5f0f0ca2790" />
 
 <img width="516" height="351" alt="image" src="https://github.com/user-attachments/assets/2eb6df66-b31e-43c4-8030-b9a3683182af" />
 
